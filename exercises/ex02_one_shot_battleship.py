@@ -50,9 +50,9 @@ if column_guess == secret_column and row_guess == secret_row:
     print(f"{BLUE_BOX}{RED_BOX}{BLUE_BOX}{BLUE_BOX}")
     print(f"{BLUE_BOX}{BLUE_BOX}{BLUE_BOX}{BLUE_BOX}")
 else:
-    guess_miss: str = WHITE_BOX
-    guess_hit: str = RED_BOX
-    open_box: str = BLUE_BOX
+    miss: str = WHITE_BOX
+    hit: str = RED_BOX
+    white_box: str = BLUE_BOX
     row_count: int = 1
     while row_count <= grid_area:
         row_str: str = ""
@@ -60,13 +60,13 @@ else:
         if row_count == row_guess:
             while col_count <= grid_area:
                 if col_count == column_guess:
-                    row_str += guess_miss
+                    row_str += miss
                 else:
-                    row_str += open_box
+                    row_str += white_box
                 col_count += 1
         else:
             while col_count <= grid_area:
-                row_str += open_box
+                row_str += white_box
                 col_count += 1
         print(row_str)
         row_count += 1
@@ -80,4 +80,3 @@ elif row_guess == secret_row:
     print("CLose! Correct row, wrong column.")
 else:
     print("Miss!")
-            
