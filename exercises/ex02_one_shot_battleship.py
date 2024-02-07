@@ -1,10 +1,10 @@
-"""One Shot Battleship"""
+"""One Shot Battleship!"""
 __author__ = "730554479"
 
 # Step 1: Establishing a secret and promoting for a guess
 grid_area: int = 4
 secret_row: int = 3
-secret_column: int= 2
+secret_column: int = 2
 BLUE_BOX: str = "\U0001F7E6"
 RED_BOX: str = "\U0001F7E5"
 WHITE_BOX: str = "\U00002B1C"
